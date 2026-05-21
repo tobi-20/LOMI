@@ -29,10 +29,6 @@ function App() {
           }
         />
 
-        <Route
-          path="/volunteer"
-          element={<div className="p-8">Volunteer</div>}
-        />
         <Route path="/donate" element={<Donate />} />
         <Route path="/sermons" element={<Sermons />} />
         <Route path="/about" element={<About />} />
