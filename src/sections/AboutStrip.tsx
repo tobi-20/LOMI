@@ -1,8 +1,7 @@
 const stats = [
   { value: '4+', label: 'Years of Ministry' },
-  { value: '50+', label: 'Nations Reached' },
+  { value: '20+', label: 'Outreaches Done' },
   { value: '1000+', label: 'Lives Transformed' },
-  { value: '20+', label: 'Disciples Raised' },
 ];
 
 export default function AboutStrip() {
@@ -29,7 +28,7 @@ export default function AboutStrip() {
         </div>
 
         {/* Stats */}
-        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="w-full grid grid-cols-3 gap-6">
           {stats.map((stat) => (
             <div
               key={stat.label}

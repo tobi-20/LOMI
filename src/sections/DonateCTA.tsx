@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function DonateCTA() {
   return (
-    <section className="bg-[#F9F7F4] py-16 px-4">
+    <section className="bg-[#FDF8EE] py-16 px-4">
       <div className="max-w-3xl mx-auto flex flex-col items-center text-center gap-8">
         {/* Header */}
         <div className="flex flex-col gap-3">
@@ -31,8 +31,9 @@ export default function DonateCTA() {
         </Link>
 
         {/* Trust line */}
-        <p className="text-[#1A1A1A]/40 text-xs">
-          Secure payments powered by Paystack · Every naira goes to the cause
+        <p className="text-[#1A1A1A]/30 text-xs">
+          Follow the provided directives and make your donations · Every naira
+          goes to the cause
         </p>
       </div>
     </section>

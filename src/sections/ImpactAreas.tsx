@@ -1,28 +1,29 @@
+import img1 from '@/assets/images/food.webp';
+import img2 from '@/assets/images/DSC_0499.webp';
+import img3 from '@/assets/images/DSC_0558.webp';
+import img4 from '@/assets/images/n edits.webp';
+
 const areas = [
   {
-    image:
-      'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&auto=format&fit=crop',
+    image: img1,
     title: 'Food & Hunger Relief',
     description:
       'We run regular food distribution programs targeting vulnerable families and individuals across underserved communities in Nigeria.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop',
+    image: img2,
     title: 'Medical Outreach',
     description:
       'Free medical consultations, medications, and health screenings brought directly to communities with little or no access to healthcare.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&auto=format&fit=crop',
+    image: img3,
     title: 'Widows & Orphans Care',
     description:
       'Providing emotional support, material aid, and long-term care programs for widows and orphaned children who have no one to turn to.',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&auto=format&fit=crop',
+    image: img4,
     title: 'Community Development',
     description:
       'Investing in people and infrastructure — from skills acquisition programs to community sanitation drives that create lasting change.',
@@ -31,7 +32,7 @@ const areas = [
 
 export default function ImpactAreas() {
   return (
-    <section className="bg-[#1B3A6B] py-16 px-4">
+    <section className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-10">
         {/* Header */}
         <div className="text-center flex flex-col gap-3">
@@ -39,12 +40,12 @@ export default function ImpactAreas() {
             What We Do
           </span>
           <h2
-            className="text-white text-3xl md:text-4xl font-bold"
+            className="text-[#1B3A6B] text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Serving Nigeria, One Life at a Time
           </h2>
-          <p className="text-white/60 text-base max-w-xl">
+          <p className="text-[#1A1A1A]/60 text-base max-w-xl">
             Our work is hands-on, community-driven, and rooted in the love of
             Christ.
           </p>
@@ -55,7 +56,7 @@ export default function ImpactAreas() {
           {areas.map((area) => (
             <div
               key={area.title}
-              className="bg-white/5 border border-white/10 rounded-sm overflow-hidden hover:bg-white/10 transition-colors duration-200"
+              className="bg-white border border-[#1B3A6B]/10 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <img
                 src={area.image}
@@ -64,10 +65,10 @@ export default function ImpactAreas() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6 flex flex-col gap-3">
-                <h3 className="text-[#C9A84C] font-semibold text-lg">
+                <h3 className="text-[#1B3A6B] font-semibold text-lg">
                   {area.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-[#1A1A1A]/60 text-sm leading-relaxed">
                   {area.description}
                 </p>
               </div>

@@ -1,21 +1,51 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '@/assets/images/LOMI_LOGO.jpg';
+import logo from '@/assets/images/LOMI_LOGO.png';
+
+type NavLinkClassArgs = {
+  isActive: boolean;
+};
 
 const navLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Mission', to: '/mission' },
+  { label: 'What We Do', to: '/' },
+  { label: 'Who We Are', to: '/about' },
+
   { label: 'Volunteer', to: '/volunteer' },
   { label: 'Donate', to: '/donate' },
   { label: 'Contact', to: '/contact' },
 ];
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (currentScrollY < viewportHeight) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        setVisible(false);
+        setMenuOpen(false);
+      } else {
+        setVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-[#1B3A6B] sticky top-0 z-50 shadow-md">
+    <nav
+      className={`bg-[#1B3A6B] fixed top-0 left-0 right-0 z-50 shadow-md transition-transform duration-300 ease-in-out ${
+        visible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <NavLink to="/">
@@ -32,11 +62,11 @@ export default function Navbar() {
             <li key={link.to}>
               <NavLink
                 to={link.to}
-                className={({ isActive }: { isActive: boolean }) =>
-                  `text-sm font-medium transition-colors duration-200 ${
+                className={({ isActive }: NavLinkClassArgs) =>
+                  `text-sm font-medium relative pb-1 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-[#C9A84C] after:transition-all after:duration-300 after:ease-in-out ${
                     isActive
-                      ? 'text-[#C9A84C] border-b-2 border-[#C9A84C] pb-0.5'
-                      : 'text-white hover:text-[#C9A84C]'
+                      ? 'text-[#C9A84C] after:w-full'
+                      : 'text-white hover:text-[#C9A84C] after:w-0 hover:after:w-full'
                   }`
                 }
               >
@@ -74,7 +104,7 @@ export default function Navbar() {
               <NavLink
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={({ isActive }: { isActive: boolean }) =>
+                className={({ isActive }: NavLinkClassArgs) =>
                   `block text-sm font-medium py-1.5 ${
                     isActive
                       ? 'text-[#C9A84C]'

@@ -6,7 +6,7 @@ const contactDetails = [
   },
   {
     label: 'Phone',
-    value: '+234 000 000 0000',
+    value: '+2340000000000',
     href: 'tel:+2340000000000',
   },
   {
@@ -20,18 +20,18 @@ export default function Contact() {
   return (
     <main className="bg-[#F9F7F4]">
       {/* Hero Strip */}
-      <section className="bg-[#1B3A6B] py-16 px-4 text-center">
+      <section className="bg-[#FDF8EE] py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto flex flex-col gap-3">
           <span className="text-[#C9A84C] text-sm font-semibold uppercase tracking-widest">
             Get In Touch
           </span>
           <h1
-            className="text-white text-3xl md:text-4xl font-bold"
+            className="text-[#1B3A6B] text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Contact Us
           </h1>
-          <p className="text-white/60 text-base max-w-xl mx-auto">
+          <p className="text-[#1A1A1A]/60 text-base max-w-xl mx-auto">
             Have a question, partnership inquiry, or want to learn more about
             our work? We'd love to hear from you.
           </p>
@@ -90,7 +90,6 @@ export default function Contact() {
             method="POST"
             className="flex flex-col gap-5"
           >
-            {/* FormSubmit config */}
             <input type="text" name="_honey" className="hidden" />
             <input type="hidden" name="_captcha" value="false" />
             <input
@@ -108,7 +107,7 @@ export default function Contact() {
                 name="name"
                 required
                 placeholder="John Doe"
-                className="border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-[#1B3A6B] transition-colors bg-white"
+                className="bg-white border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 focus:outline-none focus:border-[#1B3A6B] transition-colors"
               />
             </div>
 
@@ -121,7 +120,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="you@example.com"
-                className="border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-[#1B3A6B] transition-colors bg-white"
+                className="bg-white border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 focus:outline-none focus:border-[#1B3A6B] transition-colors"
               />
             </div>
 
@@ -133,7 +132,7 @@ export default function Contact() {
                 type="text"
                 name="subject"
                 placeholder="How can we help?"
-                className="border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-[#1B3A6B] transition-colors bg-white"
+                className="bg-white border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 focus:outline-none focus:border-[#1B3A6B] transition-colors"
               />
             </div>
 
@@ -146,7 +145,7 @@ export default function Contact() {
                 required
                 rows={5}
                 placeholder="Write your message here..."
-                className="border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-[#1B3A6B] transition-colors bg-white resize-none"
+                className="bg-white border border-[#1B3A6B]/20 rounded-sm px-4 py-2.5 text-sm text-[#1A1A1A] placeholder:text-[#1A1A1A]/30 focus:outline-none focus:border-[#1B3A6B] transition-colors resize-none"
               />
             </div>
 

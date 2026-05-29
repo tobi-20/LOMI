@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import logo from '@/assets/images/LOMI_LOGO.jpg';
+import logo from '@/assets/images/LOMI_LOGO.png';
 
 const links = [
-  { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Mission', to: '/mission' },
+  { label: 'What We Do', to: '/' },
+  { label: 'Who We Are', to: '/about' },
   { label: 'Volunteer', to: '/volunteer' },
   { label: 'Donate', to: '/donate' },
   { label: 'Contact', to: '/contact' },
