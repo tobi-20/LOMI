@@ -28,20 +28,21 @@ export default function Volunteer() {
   return (
     <main className="bg-[#F9F7F4]">
       {/* Hero Strip */}
+      {/* Hero Strip */}
       <section className="bg-[#FDF8EE] py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto flex flex-col gap-3">
           <span className="text-[#C9A84C] text-sm font-semibold uppercase tracking-widest">
-            Get In Touch
+            Get Involved
           </span>
           <h1
             className="text-[#1B3A6B] text-3xl md:text-4xl font-bold"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            Contact Us
+            Volunteer With LOMI
           </h1>
           <p className="text-[#1A1A1A]/60 text-base max-w-xl mx-auto">
-            Have a question, partnership inquiry, or want to learn more about
-            our work? We'd love to hear from you.
+            You don't need money to make a difference. Your time, skills, and
+            presence matter just as much.
           </p>
         </div>
       </section>
