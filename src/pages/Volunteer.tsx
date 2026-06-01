@@ -107,7 +107,7 @@ export default function Volunteer() {
           </div>
 
           <form
-            action="https://formsubmit.co/info@lomi.org"
+            action="https://formsubmit.co/lomi.relief@gmail.com"
             method="POST"
             className="flex flex-col gap-5"
           >

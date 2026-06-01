@@ -1,13 +1,18 @@
 const contactDetails = [
   {
     label: 'Email',
-    value: 'info@lomi.org',
-    href: 'mailto:info@lomi.org',
+    value: 'lomi.relief@gmail.com',
+    href: 'mailto:lomi.relief@gmail.com',
   },
   {
     label: 'Phone',
-    value: '+2340000000000',
-    href: 'tel:+2340000000000',
+    value: '0816 000 0522',
+    href: 'tel:+2348160000522',
+  },
+  {
+    label: 'Phone 2',
+    value: '0816 000 0523',
+    href: 'tel:+2348160000523',
   },
   {
     label: 'Location',
@@ -86,7 +91,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <form
-            action="https://formsubmit.co/info@lomi.org"
+            action="https://formsubmit.co/lomi.relief@gmail.com"
             method="POST"
             className="flex flex-col gap-5"
           >

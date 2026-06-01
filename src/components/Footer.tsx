@@ -54,18 +54,26 @@ export default function Footer() {
             <li>Nigeria</li>
             <li>
               <a
-                href="mailto:info@lomi.org"
+                href="mailto:lomi.relief@gmail.com"
                 className="hover:text-[#C9A84C] transition-colors duration-200"
               >
-                info@lomi.org
+                lomi.relief@gmail.com
               </a>
             </li>
             <li>
               <a
-                href="tel:+2340000000000"
+                href="tel:+2348160000522"
                 className="hover:text-[#C9A84C] transition-colors duration-200"
               >
-                +234 000 000 0000
+                +2348160000522
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+2348160000523"
+                className="hover:text-[#C9A84C] transition-colors duration-200"
+              >
+                +2348160000523
               </a>
             </li>
           </ul>

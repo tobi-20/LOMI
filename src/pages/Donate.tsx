@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import thankYouGif from '@/assets/images/thank_you.gif';
 
 const accountDetails = {
   bankName: 'GTBank (Guaranty Trust Bank)',
@@ -26,7 +27,11 @@ export default function Donate() {
     return (
       <section className="bg-[#F9F7F4] min-h-screen flex items-center justify-center px-4">
         <div className="max-w-md w-full bg-white border border-[#1B3A6B]/10 rounded-sm p-10 flex flex-col items-center text-center gap-5 shadow-sm">
-          <span className="text-5xl">🙏</span>
+          <img
+            src={thankYouGif}
+            alt="Thank you"
+            className="w-32 h-32 object-contain"
+          />
           <h2
             className="text-[#1B3A6B] text-2xl font-bold"
             style={{ fontFamily: 'Playfair Display, serif' }}
